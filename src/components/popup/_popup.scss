@@ -1,0 +1,148 @@
+.popup-open .popup{
+    display: flex;
+}
+
+.popup{
+    top:0;
+    display: none;
+    background: rgba(125, 151, 218, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    
+
+    &__form{
+        position: relative;
+        background-color: rgba(229,234,248,1);
+        padding: 42px 40px;
+        @media screen and (max-width:$md) {
+            padding: 42px 56px;
+          }
+        
+          @media screen and (max-width:$sm) {
+            padding: 25px;
+          }
+
+        &_item{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 16px 20px;
+        }
+
+        &_input{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+
+        &_input:nth-child(1){
+            margin-right: 20px;
+        }
+
+        &_input:nth-child(5){
+            display: inline-block;
+        }
+
+        &_label{
+            margin-bottom: 6px;
+            
+        }
+
+        &_input-two{
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width:$sm) {
+                display: flex;
+                flex-direction: column;
+              }
+        }
+
+        &_item-message{
+            min-height: 150px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &_check{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+
+    &__inputs{
+        margin-bottom: 20px;
+    }
+
+    &__button-close{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0px;
+        right: -40px;
+        background-image: url(/static/images/button-close-popup.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        background-color: transparent;
+        @media screen and (max-width:$md) {
+            top: -30px;
+            right: -8px;
+          }
+        @media screen and (max-width:$sm) {
+        top: -30px;
+        right: -8px;
+        }
+
+    }
+}
+
+.checkbox-label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1E0606;
+}
+
+.link__button:disabled{
+    background-color: rgba(193,193,193,1);
+}
+
+
+#contact-chekcbox:checked ~ .link__button{
+    background-color: #000000;
+}
+
+.active{
+    overflow:hidden;
+}
+.contact-btn{
+    display: inline-block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 9px 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.invalid-message{
+    color: red;
+}
+
+.invalid-input{
+    border-color: red;
+}

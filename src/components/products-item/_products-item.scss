@@ -1,0 +1,45 @@
+  .products-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+    @media screen and (max-width:$lg) {
+      min-width: 258px;
+    }
+    @media screen and (max-width:$md) {
+      min-width: 247px;
+    }
+
+    &__image{
+      z-index: 0;
+      display: block;
+      width: 100%
+      }
+
+    &__link{
+        position:absolute;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: #ffffff;
+        z-index: 1;
+        text-align: center;
+        
+      }
+    
+    &__link:hover {
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+      
+    &__link:active {
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+  }
+

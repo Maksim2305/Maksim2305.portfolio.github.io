@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto&family=Crimson+Text:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <title>Игрушки</title>
+</head>
+
+@@include('header/index.html')
+<main>
+    <section class="toys container">
+        <h1 class="toys__title">Toy for kids</h1>
+        <ul class="toys__title_menu">
+            <li class="toys__title_menu-item">
+                <a href="/index.html" class="toys__title_menu-link breadcrumb">Home</a>
+            </li>
+            <li class="toys__title_menu-item">
+                <a href="/pages/catalog/index.html" class="toys__title_menu-link breadcrumb">Catalog</a>
+            </li>
+            <li class="toys__title_menu-item">
+                <a class="active-catalog breadcrumb">Toys</a>
+            </li>
+        </ul>
+    </section>
+    <form class="toys-form">
+        <div class="toys-form__wrapper container">
+            <div class="toys-form__inner">
+                <div class="toys-form__one">
+                    <h2 class="toys-form__title">Cost</h2>
+                    <div class="toys-form__block">
+                        <input type="range" class="toys-form__block_slider" id="cost" name="range-cost" min="0"
+                            max="500">
+                    </div>
+                </div>
+                <div class="toys-form__two">
+                    <h2 class="toys-form__title">Color</h2>
+                    <div class="toys-form__block">
+                        <div class="toys-form__block_checkbox">
+                            <input type="checkbox" class="toys-form__block_checkbox-input" id="black" name="Color"
+                                checked>
+                            <label for="black" class="toys-form__block_checkbox-label">Black</label>
+                        </div>
+                        <div class="toys-form__block_checkbox">
+                            <input type="checkbox" class="toys-form__block_checkbox-input" id="blue" name="Color">
+                            <label for="blue" class="toys-form__block_checkbox-label">Blue</label>
+                        </div>
+                        <div class="toys-form__block_checkbox">
+                            <input type="checkbox" class="toys-form__block_checkbox-input" id="green" name="Color">
+                            <label for="green" class="toys-form__block_checkbox-label">Green</label>
+                        </div>
+                        <div class="toys-form__block_checkbox">
+                            <input type="checkbox" class="toys-form__block_checkbox-input" id="white" name="Color">
+                            <label for="white" class="toys-form__block_checkbox-label">White</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toys-form__three">
+                    <h2 class="toys-form__title">Delivery</h2>
+                    <div class="toys-form__block">
+                        <div class="toys-form__block_radio">
+                            <input type="radio" class="toys-form__block_radio-input" id="free" name="shipping">
+                            <label for="free" class="toys-form__block_radio-label">Free shipping</label>
+                        </div>
+                        <div class="toys-form__block_radio">
+                            <input type="radio" class="toys-form__block_radio-input" id="fast" name="shipping" checked>
+                            <label for="fast" class="toys-form__block_radio-label">Fast shipping</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toys-form__four">
+                    <h2 class="toys-form__title">Amount</h2>
+                    <div class="toys-form__block-flex">
+                        <div class="toys-form__block-flex_radio">
+                            <input type="radio" class="toys-form__block-flex_radio-input" id="one" name="amount"
+                                checked>
+                            <label for="one" class="toys-form__block-flex_radio-label">0-5</label>
+                        </div>
+                        <div class="toys-form__block-flex_radio">
+                            <input type="radio" class="toys-form__block-flex_radio-input" id="two" name="amount">
+                            <label for="two" class="toys-form__block-flex_radio-label">10-20</label>
+                        </div>
+                        <div class="toys-form__block-flex_radio">
+                            <input type="radio" class="toys-form__block-flex_radio-input" id="three" name="amount">
+                            <label for="three" class="toys-form__block-flex_radio-label">20-50</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="toys-form__five">
+                    @@include("button/index.html",{
+                    "text":"Apply"
+                    })
+                </div>
+            </div>
+        </div>
+    </form>
+    <section class="content-toys container">
+        <ul class="content-toys__list">
+            @@include("toy-card/index.html",{
+            "img": "1.png",
+            "text": "SHARKY BEAN BAG CHAIR COVER",
+            "price": "$60.00 USD" })
+            @@include("toy-card/index.html",{
+            "img": "2.png",
+            "text": "BRASS DECO FRAMES",
+            "price": "$66.00 USD" })
+            @@include("toy-card/index.html",{
+            "img": "3.png",
+            "text": "CIBO FULL APRON",
+            "price": "$60.00 USD" })
+            @@include("toy-card/index.html",{
+            "img": "4.png",
+            "text": "GATCHA GATCHA GUMBALL MACHINE",
+            "price": "$56.00 USD" })
+            @@include("toy-card/index.html",{
+            "img": "5.png",
+            "text": "CHRISTMAS ADVENT SCENTED CANDLE",
+            "price": "$29.00 USD" })
+            @@include("toy-card/index.html",{
+            "img": "6.png",
+            "text": "TANGLE SPINNING TEA LIGHT",
+            "price": "$56.00 USD" })
+        </ul>
+        <div class="content-toys__buttons">
+            <button class="content-toys__buttons_btn"></button>
+            <div class="content-toys__pagination">
+                <button class="content-toys__pagination_btn">1</button>
+                <button class="content-toys__pagination_btn">2</button>
+                <button class="content-toys__pagination_btn">3</button>
+                <button class="content-toys__pagination_btn">4</button>
+            </div>
+            <button class="content-toys__buttons_btn"></button>
+        </div>
+    </section>
+</main>
+@@include('footer/index.html')
+<script src="index.js"></script>
+</body>
+
+</html>

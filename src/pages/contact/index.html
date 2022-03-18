@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto&family=Crimson+Text:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <title>Contact-us</title>
+</head>
+
+@@include('header/index.html')
+<main>
+    <section class="toys container">
+        <h1 class="toys__title">Toy for kids</h1>
+        <ul class="toys__title_menu">
+            <li class="toys__title_menu-item">
+                <a href="/index.html" class="toys__title_menu-link breadcrumb">Home</a>
+            </li>
+            <li class="toys__title_menu-item">
+                <a href="/pages/catalog/index.html" class="toys__title_menu-link breadcrumb">Catalog</a>
+            </li>
+            <li class="toys__title_menu-item">
+                <a class="active-catalog breadcrumb">Contact-us</a>
+            </li>
+        </ul>
+        <form class="popup__form contact-form_js" name="SignIn">
+            <div class="popup__form_input">
+                <label class="popup__form_label" for="name">Name</label>
+                <input class="popup__form_item" type="text" name="name" placeholder="Ivan Ivanov" id="name">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="popup__form_input-two">
+                <div class="popup__form_input">
+                    <label class="popup__form_label" for="name">Phone</label>
+                    <input class="popup__form_item" type="tel" name="phone" id="phone">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="popup__form_input">
+                    <label class="popup__form_label" for="email">Email</label>
+                    <input class="popup__form_item" type="text" name="email" id="email">
+                    <div class="invalid-feedback"></div>
+                </div>
+            </div>
+            <div class="popup__form_input">
+                <label class="popup__form_label" for="message">Message</label>
+                <textarea class="popup__form_item-message"  id="message" name="textarea"></textarea>
+            </div>
+            <div class="popup__form_input">
+                <div class="popup__form_check">
+                    <div class="popup__inputs">
+                        <input class="checkbox-input" type="checkbox" name="checkbox" id="contact-checkbox" value="yes">
+                        <label for="contact-chekcbox" class="checkbox-label">By clicking on the button, you consent to the
+                    processing of your personal data</label>
+                    <div class="invalid-feedback"></div>
+                    </div>
+                    <div>
+                        <button type="submit" class="contact-btn">Submit</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    
+</main>
+@@include('footer/index.html')
+<script src="index.js"></script>
+</body>
+
+</html>

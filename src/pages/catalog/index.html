@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto&family=Crimson+Text:ital@1&display=swap"
+    rel="stylesheet">
+    <link href="/common.css" rel="stylesheet" />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <title>Главная</title>
+</head>
+
+<body>
+    @@include('header/index.html')
+    <main class="category-products container">
+        <h1 class="category-products__title">category-products</h1>
+        <ul class="category-products__title_menu">
+            <li class="category-products__title_menu-item">
+                <a href="/" class="category-products__title_menu-link breadcrumb">Home</a>
+            </li>
+            <li class="category-products__title_menu-item">
+                <a class="active-catalog breadcrumb">Catalog</a>
+            </li>
+        </ul>
+        <div class="category-products__wrapper">
+            <ul class="category-products__list">
+                @@include("products-item/index.html",{
+                "img": "1.jpg",
+                "text": "APPAREL <br>KIDS" })
+                @@include("products-item/index.html",{
+                "img": "2.jpg",
+                "text": "HOLIDAY <br>SHOP" })
+                @@include("products-item/index.html",{
+                "img": "3.jpg",
+                "text": "TOYS" })
+                @@include("products-item/index.html",{
+                "img": "4.jpg",
+                "text": "ACCESSORIES" })
+                @@include("products-item/index.html",{
+                "img": "5.png",
+                "text": "SALE" })
+                @@include("products-item/index.html",{
+                "img": "6.png",
+                "text": "APPAREL <br>ADULTS" })
+            </ul>
+        </div>
+        <div class="category-products__description">
+                <h2 class="category-products__title">Product Description</h2>
+            <p class="category-products__info">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle
+                and
+                almost really cry. You can
+                even bathe her, just like a little sister.</p>
+            <p class="category-products__info">A toy with a height of 43 cm bends its knees, the head rotates, it can
+                stand
+                upright. Such a doll will be
+                an excellent choice for a gift for a girl from 4 years old.</p>
+            <p class="category-products__info">The set includes a miniature set of fashionable clothes, a hairbrush, a
+                bottle
+                for water, a pair of
+                hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young
+                mistress.</p>
+        </div>
+    </main>
+    @@include('footer/index.html')
+    <script src="index.js"></script>
+</body>
+
+</html>

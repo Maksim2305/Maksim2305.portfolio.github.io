@@ -1,0 +1,33 @@
+@import "./../../pages/toys/style";
+
+.popup__form{
+    margin-top: 50px;
+}
+
+.active{
+    background-color:burlywood
+}
+.contact-btn{
+    display: inline-block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 9px 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.invalid-message{
+    color: red;
+}
+
+.invalid-input{
+    border-color: red;
+}

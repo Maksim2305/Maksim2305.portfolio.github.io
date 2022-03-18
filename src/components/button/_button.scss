@@ -1,0 +1,29 @@
+.collection__button {
+    display: inline-block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 9px 22px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #c29974;
+    }
+
+    &:focus {
+        outline-color: #c29974;
+    }
+
+    &:active {
+        background-color: #cfaf91;
+    }
+    }
+

@@ -1,0 +1,16 @@
+.map {
+    width: initial;
+    margin: 0 30px;
+    @media screen and (max-width:$md) {
+        margin: 0 15px;
+    }
+    @media screen and (max-width:$sm) {
+        margin: 0 20px;
+    }
+
+    &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto&family=Crimson+Text:ital@1&display=swap"
+    rel="stylesheet">
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <meta name="viewport" content="width=device-width,
+initial-scale=1">
+  <title>Главная</title>
+</head>
+
+<body>
+  @@include("header/index.html")
+  <main>
+    @@include("popup/index.html")
+    <div class="button-to-top_hidden button-to-top_js"></div>
+    <section class="collection container">
+      <div class="collection__wrapper">
+        <div class="collection__button_block">
+          <p class="collection__number">01</p>
+          <button class="collection__slider_active"></button>
+          <button class="collection__slider"></button>
+          <button class="collection__slider"></button>
+          <button class="collection__slider"></button>
+        </div>
+        <div class="collection__title_block">
+          <h2 class="collection__title">THE OOH NOO<br>COLLECTION</h2>
+          <div class="collection__design">
+            <p>Designed in Slovenia</p>
+          </div>
+          <div>
+            @@include("button/index.html",{
+              "text":"explore now"
+              })
+          </div>
+        </div>
+        <div class="collection__wrapper_img">
+          <img class="collection__wrapper_img_pic" src="/static/images/collection.png" alt="col">
+        </div>
+      </div>
+      <p class="collection__content">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+    </section>
+
+    <section class="products container">
+      <div class="products__wrapper">
+        <h2 class="products__title">Category Products</h2>
+        <div class="slider-wrapper_js">
+          <ul class="products__list slider_js">
+            @@include("products-item/index.html",{
+            "img": "1.jpg",
+            "text": "APPAREL <br>KIDS" })
+            @@include("products-item/index.html",{
+            "img": "2.jpg",
+            "text": "HOLIDAY <br>SHOP" })
+            @@include("products-item/index.html",{
+            "img": "3.jpg",
+            "text": "TOYS" })
+            @@include("products-item/index.html",{
+            "img": "4.jpg",
+            "text": "ACCESSORIES" })
+            @@include("products-item/index.html",{
+              "img": "4.jpg",
+              "text": "ACCESSORIES" })
+              
+          </ul>
+        </div>
+        <div class="products__pagination">
+          <button class="products__pagination__left"></button>
+          <button class="products__pagination__right"></button>
+          <p class="products__description">Modern finds for the modern home. Curated goods by
+            unique
+            designers
+            around the world from fashion to
+            furniture for kids and adults.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery container">
+      <div class="delivery__inner">
+        <div class="delivery__inner_img">
+          <img class="delivery__pic" src="/static/images/delivery/woman.jpg" alt="woman">
+        </div>
+        <div class="delivery__content">
+          <h2 class="delivery__content_title">Delivery</h2>
+          <div class="delivery__content_button">
+            <span class="delivery__content_item">Delivery</span>
+          </div>
+          <div class="delivery__content_button">
+            <span class="delivery__content_item">Guarantee</span>
+          </div>
+          <div class="delivery__content_button">
+            <span class="delivery__content_item">Credit</span>
+          </div>
+          <span class="delivery__content_description">Some days i feel like i've been working on dlk my entire life and there are other days that
+            i am completely shocked that four years have flown by. It's simply magical.<br><br>
+            What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy
+            place for me and i have you and all of the beautiful designers that we work with to thank!</span>
+            <div>
+              @@include("link__button/index.html",{
+                "text":"learn more"
+                })
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners container">
+      <ul class="partners__list">
+        <li class="partners__item">
+          <img src="/static/images/partners/mail.png" alt="Mail" class="partners__image">
+        </li>
+        <li class="partners__item">
+          <img src="/static/images/partners/apple.png" alt="Apple" class="partners__image">
+        </li>
+        <li class="partners__item">
+          <img src="/static/images/partners/altex.png" alt="Altex" class="partners__image">
+        </li>
+        <li class="partners__item">
+          <img src="/static/images/partners/owox.png" alt="Owox" class="partners__image">
+        </li>
+      </ul>
+    </section>
+
+    <section class="about-us container">
+      <div class="about-us__wrapper">
+        <div class="about-us__design">
+          <h2 class="about-us__title">Design Life Kids</h2>
+          <div class="about-us__wrap">
+            <p class="about-us__description">About Us</p>
+            <p class="about-us__content">Some days i feel like i've been working on dlk my entire life and there
+              are other days that
+              i am completely
+              shocked that four years have flown by. It's simply magical.</p>
+              <div class="about-us__button">
+                @@include("link__button/index.html",{
+                  "text":"buy now"
+                  })
+              </div>
+          </div>
+        </div>
+        <div class="about-us__contact">
+          <h2 class="about-us__title">Contacts</h2>
+          <div class="contact__wrap">
+            <p class="about-us__content">Some days i feel like i've been working on dlk my entire life
+              and there are other days that
+              i am completely
+              shocked that four years have flown by. It's simply magical.</p>
+              @@include("map/index.html")
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include("footer/index.html")
+  <script src="scripts.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
